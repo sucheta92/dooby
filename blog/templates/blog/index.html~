@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Index</title>
+</head>
+<body>
+{% block content %}
+<form name="jakhushi" action="" method="POST">
+{{ x.text.label }}
+{{ x.text }}
+{{ x.header.label }}
+{{ x.header }}
+</form>
+{% endblock content %}
+</body>
+</html>
+
+
+

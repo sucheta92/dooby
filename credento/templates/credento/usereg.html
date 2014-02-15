@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Index</title>
+</head>
+<body>
+{% block content %}
+<form name="jakhushi" action=" " method="POST">
+{% csrf_token %}
+{{ x.firstname.label }}
+{{ x.firstname }}
+{{ x.lastname.label }}
+{{ x.lastname }}
+{{ x.username.label }}
+{{ x.username }}
+{{ x.password.label }}
+{{ x.password }}
+{{ x.phone.label }}
+{{ x.phone }}
+
+<input type="submit" value="Submit" />
+</form>
+{% endblock content %}
+</body>
+</html>
+
+
+

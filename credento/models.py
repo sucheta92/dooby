@@ -1,0 +1,19 @@
+from django.db import models
+from django import forms
+
+class user_model(models.Model):
+    firstname = models.CharField(max_length=30)
+    laststname = models.CharField(max_length=30)
+    phone = models.IntegerField()
+    username = models.CharField(max_length=30)
+    password = models.CharField(max_length=30)
+
+
+class Register(forms.Form):
+    firstname=forms.CharField(max_length=30)
+    lastname=forms.CharField(max_length=30)
+    phone=forms.IntegerField()
+    username=forms.CharField(max_length=30)
+    password=forms.CharField(max_length=30)
+
+# Create your models here.
