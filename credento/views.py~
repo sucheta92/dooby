@@ -16,7 +16,7 @@ def auth_view(request):
     password = request.POST.get('password', '')
     user = auth.authenticate(username = username, password = password)
 
-    if user is not NONE:
+    if user is not None:
         auth.login(request,user)
         return HttpResponseRedirect('/accounts/loggedin')
     else:
@@ -43,7 +43,7 @@ def register_user(request):
             username=form.cleaned_data['username']
             password=form.cleaned_data['password']
             phone=form.cleaned_data['phone']
-            u=user_model(firstname=firstname,lastsname=lastname,username=username,password=password,phone=phone)
+            u=user_model(firstname=firstname,laststname=lastname,username=username,password=password,phone=phone)
             u.save()
             return HttpResponse('<html><head></head><body>Successfully registered</body></html>')
     else:

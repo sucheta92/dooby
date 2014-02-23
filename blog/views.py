@@ -13,8 +13,8 @@ def blog(request):
     if form.is_valid():
       text=form.cleaned_data['text']
       header=form.cleaned_data['header']
-      user=Posting(writing=text,user=header)
-      user.save()
+      t=Posting(writing=text,user=header)
+      t.save()
       return HttpResponse('<html><head></head><body>Success</body></html>')
   else:
     form = Blog()
