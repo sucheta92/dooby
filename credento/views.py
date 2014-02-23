@@ -16,7 +16,7 @@ def auth_view(request):
     password = request.POST.get('password', '')
     user = auth.authenticate(username = username, password = password)
 
-    if user is not NONE:
+    if user is not None:
         auth.login(request,user)
         return HttpResponseRedirect('/accounts/loggedin')
     else:
